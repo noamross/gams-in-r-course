@@ -5,6 +5,8 @@ Welcome! This is the source repository for **Generalized Additive Models in R: A
 
 This course is based on material developed collaboratively over teaching workshops with <a href='http://converged.yt/'>David Miller</a>, <a href='https://www.fromthebottomoftheheap.net/'>Gavin L. Simpson</a>, <a href='https://ericpedersen3.wixsite.com/research'>Eric J. Pedersen</a>.
 
+More resources for learning abuot and using GAMs can be found [here](https://github.com/noamross/gam-resources).
+
 The site itself is built on an amazing framework created by <a href='https://ines.io/'>Ines Montani</a>, originally created for her [spaCy course](https://course.spacy.io).  The front-end is powered by
 [Gatsby](http://gatsbyjs.org/) and [Reveal.js](https://revealjs.com) and the
 back-end code execution uses [Binder](https://mybinder.org). <a href='https://florencia.netlify.com/'>Florencia D'Andrea</a> helped port the course materials.</p>
