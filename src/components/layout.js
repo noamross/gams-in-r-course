@@ -57,19 +57,19 @@ const Layout = ({ isHome, title, description, children }) => {
                                 <div className={classes.footerContent}>
                                     <section className={classes.footerSection}>
                                         <H3>About this course</H3>
-                                        <p>{meta.description}</p>
+                                        <div dangerouslySetInnerHTML={{__html: meta.description }} />
                                     </section>
 
                                     <section className={classes.footerSection}>
                                         <H3>About me</H3>
                                         {meta.showProfileImage && (
                                             <img
-                                                src="/profile.jpg"
-                                                alt=""
+                                                src="/profile.png"
+                                                alt="Noam Ross"
                                                 className={classes.profile}
                                             />
                                         )}
-                                        <p>{meta.bio}</p>
+                                        <div dangerouslySetInnerHTML={{__html: meta.bio }} />
                                     </section>
 
                                     {meta.footerLinks && (
