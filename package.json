@@ -40,12 +40,11 @@
         "reveal.js": "^3.8.0"
     },
     "scripts": {
-        "build": "gatsby build",
+        "build": "gatsby build --prefix-paths && mv public docs",
         "dev": "gatsby develop",
         "lint": "eslint **",
         "clear": "rm -rf .cache",
-        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-        "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
     },
     "devDependencies": {
         "browser-monads": "^1.0.0",
