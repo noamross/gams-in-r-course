@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-212952f2f47967cd7bed.js"
+    "url": "webpack-runtime-610ce5ccfc466f88f91a.js"
   },
   {
     "url": "styles.74706255fa78800aa371.css"
@@ -39,7 +39,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a9188b4c150a71e9fc2314dbca7b4107"
+    "revision": "dab8d850e5659eeae13a822688a3a752"
   },
   {
     "url": "static/d/604/path---offline-plugin-app-shell-fallback-a-30-c5a-BawJvyh36KKFwbrWPg4a4aYuc8.json"
@@ -67,7 +67,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/reponame/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/noamross/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -139,7 +139,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/reponame${pathname}`
+        return `/noamross${pathname}`
       } else {
         return pathname
       }
