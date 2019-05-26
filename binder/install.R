@@ -1,4 +1,4 @@
-ibrary(remotes)
+library(remotes)
 
 ##### Install specific package versions from CRAN #####
 
