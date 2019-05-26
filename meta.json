@@ -10,7 +10,7 @@
     "testTemplate": "success <- function(text) {\n    cat(paste(\"\\033[32m\", text, \"\\033[0m\", sep = \"\"))\n}\n\n.solution <- \"${solutionEscaped}\"\n\n${solution}\n\n${test}\ntryCatch({\n    test()\n}, error = function(e) {\n    cat(paste(\"\\033[31m\", e[1], \"\\033[0m\", sep = \"\"))\n})",
     "juniper": {
         "repo": "noamross/gam-in-r-course",
-        "branch": "binder",
+        "branch": "master",
         "lang": "r",
         "kernelType": "ir",
         "debug": false
