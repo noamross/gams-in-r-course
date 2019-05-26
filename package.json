@@ -1,9 +1,9 @@
 {
-    "name": "course-starter-r",
+    "name": "gams-in-r-course",
     "private": true,
-    "description": "Starter package to build interactive R courses",
+    "description": "Generalized Additive Models in R: A Free Interactive Course",
     "version": "0.0.1",
-    "author": "Ines Montani <ines@explosion.ai>",
+    "author": "Noam Ross <noam.ross@gmail.com>",
     "dependencies": {
         "@illinois/react-use-local-storage": "^1.1.0",
         "@jupyterlab/outputarea": "^0.19.1",
@@ -44,14 +44,16 @@
         "dev": "gatsby develop",
         "lint": "eslint **",
         "clear": "rm -rf .cache",
-        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+        "deploy": "gatsby build --prefix-paths && gh-pages -d public"
     },
     "devDependencies": {
         "browser-monads": "^1.0.0",
+        "gh-pages": "^2.0.1",
         "prettier": "^1.16.4"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ines/course-starter-python"
+        "url": "https://github.com/noamross/gams-in-r-course"
     }
 }
