@@ -22,7 +22,7 @@ After summarizing the model, you will answer the following question:
 
 Which smooth term in this model is _significant_ and _linear_?
 
-** Instructions **
+**Instructions**
 - Summarize the `mod_city4` model.
 
 <codeblock id="02_02">
@@ -132,7 +132,7 @@ For our first plotting exercise, we'll add _partial residuals_ to the _partial e
 
 In plotting GAMs, you sometimes want to look at just parts of a model, or all the terms in model.  Here you'll practice selecting which terms to visualize.
 
-** Instructions **
+**Instructions**
 -  Plot the provided model (`mod`) that uses the `mpg` data, using the `select` term to view only the partial effect of `price`. 
 -  Make another plot, this time showing _all_ terms on a single page, including the linear `comp.ratio` term.
 
@@ -151,7 +151,7 @@ In plotting GAMs, you sometimes want to look at just parts of a model, or all th
 
 Confidence intervals are a very important visual indicator of model fit.  Here you'll practice changing the appearance of confidence intervals and transforming the scale of partial effects plots.
 
-** Instructions **
+**Instructions**
 -  Plot the model (`mod`) that uses the `mpg` data, plotting only the partial effect of `weight`. Make the confidence interval shaded and `"hotpink"` in color.
 -  Make another plot of the `weight` partial effect, this time shifting the scale by the value of the intercept using the `shift` argument, and including the uncertainty of the model intercept using the `seWithMean` argument.
 
@@ -178,7 +178,7 @@ Confidence intervals are a very important visual indicator of model fit.  Here y
 
 After running checks on the model, answer the following question: Which smooths do not have sufficient numbers of basis functions?
 
-** Instructions **
+**Instructions**
 -  Print diagnostics on model (`mod`) basis size and plots of model residuals.
 
 <codeblock id="02_09">
@@ -223,7 +223,7 @@ Incorrect. A smooth without enough basis functions would have significant result
 
 You can use `gam.check()` to improve models by updating them based on its results.
 
-** Instructions **
+**Instructions**
 - Run the model diagnostics on `mod`. 
 - Based on the diagnostics, re-fit the model as `mod2`, changing the number of basis functions (`k`) for failing smooths. 
 - Run the model diagnostics on `mod2` to ensure you have fixed the issue.
@@ -253,7 +253,7 @@ Let's take a look at concurvity in the fuel efficiency model variables.
 
 After checking the overall concurvity of `mod`, answer the following question: Which smooth is _least_ pre-determined by all the other variables?
 
-** Instructions **
+**Instructions**
 - Inspect the overall concurvity of `mod`.
 
 <codeblock id="02_12">
@@ -301,7 +301,7 @@ Now, let's look at concurvity _between_ model variables.
 
 After examining the pairwise concurvity between variables in `mod`, answer the following question: Which two variables have the greatest worst-case concurvity?
 
-** Instructions **
+**Instructions**
 - Inspect the pairwise concurvity for variables in `mod`.
 
 <codeblock id="02_13">

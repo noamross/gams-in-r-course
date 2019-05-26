@@ -78,7 +78,7 @@ Incorrect. Remember, the number of basis functions is equal to the number of the
 
 Now let's add additional predictors to the model with spatial interactions.
 
-** Instructions **
+**Instructions**
 Fit another model to predict cadmium in the soil, this time including smooths for the effect of elevation (`elev`) and distance from the river (`dist`) in addition to an `x`, `y` surface.
 
 <codeblock id="03_03">
@@ -103,7 +103,7 @@ Let's explore the different visualization schemes available in `mgcv`'s `plot()`
 
 The model you built in the last exercise (`mod2da`) is available in your workspace.
 
-** Instructions **
+**Instructions**
 - Plot the interaction terms of `mod2da` as a contour plot.
 
 <codeblock id="03_05">
@@ -217,7 +217,7 @@ The `meuse` data set has a factor variable, `landuse`, which specifies the type 
 
 </codeblock>
 
-** Instructions **
+**Instructions**
 - Fit a model with a factor-smooth interaction between `dist` and `landuse` variables using the `bs = "fs"` formulation.
 - Print the model summary.
 

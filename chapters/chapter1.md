@@ -21,7 +21,7 @@ to see how well it captures relationships in the data.  The data set, stored in 
 during a motorcycle crash. It contains measurements of acceleration (g) in the `accel` column
 and time (milliseconds) in the `times` column.
 
-** Instructions **
+**Instructions**
 - Use the `head()` and `plot()` functions to look at the data frame named `mcycle`. 
 - Use the `lm()` function to fit a model to the `mcycle` data where the `accel` variable is a _linear_ function of `times`. 
 - Visualize the model fit using the provided call to `termplot()`.
@@ -39,7 +39,7 @@ When fitting a linear model with `lm()`, use the formula syntax `y ~ x` in the f
 Now you will fit a non-linear model to the same `mcycle` data using the `gam()` function from
 the **mgcv** package.
 
-** Instructions **
+**Instructions**
 - Load the `mgcv` package. 
 - Fit a model to the  `mcycle` data where `accel` has a smooth, nonlinear relation to `times` using the `gam()` function. 
 - Visualize the model fit using the provided call to `plot()`.
@@ -60,7 +60,7 @@ You can use the `coef()` function to extract the coefficients from the GAM model
 
 After extracting the coefficients, answer the question: How many coefficients are there for the _basis functions_ that compose the smooth curve in this model?
 
-** Instructions **
+**Instructions**
 - Extract the model coefficients of the `gam_mod` object which is available in your workspace.
 
 <codeblock id="01_04">
@@ -112,7 +112,7 @@ The number of basis functions in a smooth has a great impact
 on the shapes a model can take.  Here, you'll practice modifying
 the number of basis functions in a model and examining the results.
 
-** Instructions **
+**Instructions**
 -  Fit a GAM with 3 basis functions to the `mcycle` data, with `accel` as a smooth function of `times`. 
 -  Fit the same GAM again, but this time with 20 basis functions. 
 -  Use the provided `plot()` functions to visualize both models.
@@ -130,7 +130,7 @@ in the model formula, e.g., `y ~ s(x, k = 5)`.
 
 The smoothing parameter balances between likelihood and wiggliness to optimize model fit. Here, you'll examine smoothing parameters and will fit models with different fixed smoothing parameters.
 
-** Instructions **
+**Instructions**
 - View the value of the smoothing parameter ($\lambda$) of the provided `gam_mod` model by extracting the `sp` value from the model.
 - Fit two models to the `mcycle` data with `accel` as a smooth function of `times` and a smoothing parameter of: 
     - 0.1
@@ -153,7 +153,7 @@ The number of basis functions and the smoothing parameters interact to
 control the wiggliness of a smooth function.  Here you will see how
 changing both together affects model behavior.
 
-** Instructions **
+**Instructions**
 -  Fit a GAM models to the `mcycle` data with `accel` as a smooth function of `times` with 50 basis functions and a smoothing parameter of 0.0001. 
 -  Visualize the model.
 
@@ -178,7 +178,7 @@ in the model formula.
 
 GAMs can accept multiple variables of different types. In the following exercises, you'll work with the `mpg` dataset available in the [`gamair`](https://www.rdocumentation.org/packages/gamair/topics/gamair-package) package to practice fitting models of different forms.
 
-** Instructions **
+**Instructions**
 -  Use the `head()` and `str()` functions to examine the `mpg` data set. 
 -  Fit a GAM to these data to predict `city.mpg` as the sum of smooth functions of `weight`, `length`, and `price`. 
 -  Use the `plot()` function provided to visualize the model.
@@ -195,7 +195,7 @@ A formula of the form `y ~ s(x1) + s(x2) + s(x3)` will fit a model which uses th
 
 Now you'll include categorical variables in your model. Categories are inherently linear, so you'll model them as linear terms.
 
-** Instructions **
+**Instructions**
 - Fit a GAM to the `mpg` data, modeling `city.mpg` as a sum of smooth functions of `weight`, `length`, and `price`, and also include the categorical terms `fuel`, `drive`, and `style`. 
 - Use the `plot()` function provided to visualize the model.
 
@@ -211,7 +211,7 @@ Categorical terms should be included as linear terms without `s()`. Mix non-line
 
 Now you extend your models to include different smooths for different levels of categorical terms.
 
-** Instructions **
+**Instructions**
 - Fit a model to predict city fuel efficiency (`city.mpg`) with smooth terms of `weight`, `length`, and `price`, but make
   each of these smooth terms depend on the `drive` categorical variable using `by=` in the smooth terms. 
 - Include a separate linear term for the `drive` variable.
