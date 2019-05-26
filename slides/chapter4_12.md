@@ -90,8 +90,6 @@ First, there are many additional types of smooths beyond the ones we have used h
 ```r
 ?family.mgcv
 ```
-See [Generalized Linear Models](https://www.datacamp.com/courses/generalized-linear-models-in-r)
-
 
 Notes: If you have taken a course in generalized linear models, you probably know that there are many types of outcomes, such as count data, which they can model. These can be fit with GAMs, as well. mgcv also has an extensive collection of outcome distributions above and beyond those available in most GLM packages. You'll find them described in the ?family.mgcv help file.  If you have not taken it already, you may want to consider DataCamp's Generalized Linear Models course.
 
@@ -112,13 +110,32 @@ Notes: mgcv has tools for variable selection when model building.  You can learn
 ?gam.models
 ``` 
 
-See [Hierarchical and Mixed Effects Models](https://www.datacamp.com/courses/hierarchical-and-mixed-effects-models)
+Notes: Finally, there are other options in mgcv for alternative or more complex model structures, such as mixed effects. The ?gam.models help file has an overview of these topics and will point you to more documentation.  If you are interested in these more complex models, the course on Hierarchical and Mixed Effects Models here on DataCamp may be of interest to you.
+
+# Complex model structures
+
+```r
+?gam.models
+``` 
 
 Notes: Finally, there are other options in mgcv for alternative or more complex model structures, such as mixed effects. The ?gam.models help file has an overview of these topics and will point you to more documentation.  If you are interested in these more complex models, the course on Hierarchical and Mixed Effects Models here on DataCamp may be of interest to you.
+
+# More Resources
+
+Go to <http://bit.ly/gam-resources> for a collection of:
+
+- Videos
+- Books
+- Papers
+- Other courses
+
+about GAMs!
+
+Note: I've collected some of the my resources for learning about GAMs so you can continue learning. If you want to extend your knowledge, practice more, have a handy reference, or learn about GAMs in a different way, go to <http://bit.ly/gam-resources> links to a variety of GAM-related material by expert statisticians instructors. 
 
 ---
 
 #  Thank You!
 
-Notes: Thanks for taking this course on nonlinear modeling in R with GAMs. I hope you make good use of these flexible modeling tools in your Data Science journey.
+Notes: Thanks for taking this course on nonlinear modeling in R with GAMs. I hope you find these flexible and powerful tools useful in your work.
 
