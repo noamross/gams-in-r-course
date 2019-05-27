@@ -339,19 +339,19 @@ Multiple choice: Which term makes the greatest contribution to the prediction of
 <choice>
 <opt text="s(n_acts)">
 
-Incorrect. `s(n_acts)` lower the predicted probability, but another term raises it even more.
+Incorrect. `s(n_acts)` lowers the predicted probability, but another term raises it even more.
 
 </opt>
 
-<opt text="s(bal_crdt_ratio)" correct="true">
+<opt text="s(bal_crdt_ratio)">
 
-Correct! For this data point, `s(bal_crdt_ratio)` has the greatest contribution to the prediction.  Note this is despite the fact that `s(n_acts)` has a larger _overall_ effect, as we saw in the last section.
+Incorrect. Another term has more influence on this prediction than `s(bal_crdt_ratio)`
 
 </opt>
 
-<opt text="s(avg_prem_balance)">
+<opt text="s(avg_prem_balance)"  correct="true">
 
-Incorrect. Another term has more influence on this prediction than `s(avg_premium_balance)`
+Correct! For this data point, `s(avg_prem_balance)` has the greatest contribution to the prediction.  Note this is despite the fact that `s(n_acts)` has a larger _overall_ effect, as we saw in the last section.
 
 </opt>
 
