@@ -9,7 +9,7 @@ More resources for learning about and using GAMs can be found [here](https://git
 
 The site itself is built on an amazing framework created by <a href='https://ines.io/'>Ines Montani</a>, originally created for her [spaCy course](https://course.spacy.io).  The front-end is powered by
 [Gatsby](http://gatsbyjs.org/) and [Reveal.js](https://revealjs.com) and the
-back-end code execution uses [Binder](https://mybinder.org). <a href='https://florencia.netlify.com/'>Florencia D'Andrea</a> helped port the course materials.</p>
+back-end code execution uses [Binder](https://mybinder.org). <a href='https://florencia.netlify.com/'>Florencia D'Andrea</a> helped port the course materials and made the lovely logo.</p>
 
 If you are interested in building a course on this framework, see Ines's starter repos for making courses in [Python](https://github.com/ines/course-starter-python) and [R](https://github.com/ines/course-starter-python), and her behind-the-scenes explanation of how the framework works at [the original course repo](https://github.com/ines/spacy-course#-faq).
 
