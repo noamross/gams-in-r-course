@@ -1,3 +1,4 @@
+
 ex() %>% {
   check_function(., "head") %>% check_arg("x") %>% check_equal()
   check_function(., "plot") %>% check_arg("x") %>% check_equal()
