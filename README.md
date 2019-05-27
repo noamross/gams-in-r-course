@@ -1,6 +1,7 @@
 <p align="center">
 <img src="static/logo.svg" align="center" width="450px"/>
 </p>
+
 Welcome! This is the source repository for **Generalized Additive Models in R: A Free Interactive Course**, hosted at: <https://noamross.github.io/gams-in-r-course>.
 
 This course is based on material developed collaboratively over years of teaching workshops with <a href='http://converged.yt/'>David Miller</a>, <a href='https://www.fromthebottomoftheheap.net/'>Gavin L. Simpson</a>, <a href='https://ericpedersen3.wixsite.com/research'>Eric J. Pedersen</a>.
