@@ -18,9 +18,6 @@ id: 3
 
 Let's take a closer look at the `meuse` data and use it to fit your first 2-D model. 
 
-After reviewing the model you will fit, answer the following question: 
-
-How many basis functions are used in the two-dimensional smooth?
 
 - Inspect the `meuse` data with the `head()` and `str()` functions.
 
@@ -40,6 +37,8 @@ How many basis functions are used in the two-dimensional smooth?
 - Look at the output of `coef(mod2d)`. How many coefficients are associated with the `s(x, y)` smooth?
 
 </codeblock>
+
+Multiple Choice: How many basis functions are used in the two-dimensional smooth?
 
 <choice>
 <opt text="10">
