@@ -7,7 +7,7 @@
     "siteUrl": "https://noamross.github.io/gams-in-r-course",
     "twitter": "noamross",
     "fonts": "IBM+Plex+Mono:500|IBM+Plex+Sans:700|Lato:400,400i,700,700i",
-    "testTemplate": "success <- function(text) {\n    cat(paste(\"\\033[32m\", text, \"\\033[0m\", sep = \"\"))\n}\n\n.solution <- \"${solutionEscaped}\"\n\n${solution}\n\n${test}\ntryCatch({\n    test()\n}, error = function(e) {\n    cat(paste(\"\\033[31m\", e[1], \"\\033[0m\", sep = \"\"))\n})",
+    "testTemplate": "library(testwhat)\n.solution <- \"${solutionEscaped}\"\n\n.solutionfile <- \"${solutionFileEscaped}\"\n\n\nsetup_state(sol_code = .solutionfile, stu_code = .solution)\n\ntryCatch({\n    ${test}\n    cat(paste(\"\\033[32m\", text, \"\\033[0m\", sep = \"\"))\n}, error = function(e) {\n    cat(paste(\"\\033[31m\", e[1], \"\\033[0m\", sep = \"\"))\n})",
     "juniper": {
         "repo": "noamross/gams-in-r-course",
         "branch": "master",

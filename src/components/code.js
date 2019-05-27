@@ -15,12 +15,14 @@ function getFiles({ allCode }) {
     )
 }
 
-function makeTest(template, testFile, solution) {
+function makeTest(template, testFile, solutionFile, solution) {
     // Escape quotation marks in the solution code, for cases where we
     // can only place the solution in regular quotes.
     const solutionEscaped = solution.replace(/"/g, '\\"')
+    const solutionFileEscaped = solution.replace(/"/g, '\\"')
     return template
         .replace(/\${solutionEscaped}/g, solutionEscaped)
+        .replace(/\${solutionFileEscaped}/g, solutionFileEscaped)
         .replace(/\${solution}/g, solution)
         .replace(/\${test}/g, testFile)
 }
@@ -129,7 +131,7 @@ class CodeBlock extends React.Component {
                                                     variant="primary"
                                                     onClick={() =>
                                                         runCode(value =>
-                                                            makeTest(testTemplate, testFile, value)
+                                                            makeTest(testTemplate, testFile, solutionFile, value)
                                                         )
                                                     }
                                                 >
