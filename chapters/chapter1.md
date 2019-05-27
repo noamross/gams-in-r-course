@@ -54,22 +54,19 @@ When fitting a GAM, use the syntax `y ~ s(x)` in the model formula to indicate t
 
 <exercise id="4" title="Parts of non-linear function">
 
-GAMs are made up of _basis functions_ that together compose the smooth terms in models.
-
-You can use the `coef()` function to extract the coefficients from the GAM model object.  
-
-After extracting the coefficients, answer the question: How many coefficients are there for the _basis functions_ that compose the smooth curve in this model?
+GAMs are made up of _basis functions_ that together compose the smooth terms in models. The `coef()` function extracts the coefficients of these basis functions the GAM model object.  
 
 **Instructions**
-- Extract the model coefficients of the `gam_mod` object which is available in your workspace.
+- Extract the model coefficients of the `gam_mod` object which is available in your workspace. Then determine how many basis functions compose the smooth curve of the mode.
 
 <codeblock id="01_04">
 
-The `coef()` function extracts all the model coefficients, which are coefficients for each basis function that makes up the smooth.
-
+- The `coef()` function extracts all the model coefficients, which are coefficients for each basis function that makes up the smooth.
+- The model coefficients include one coefficient for the intercept as well as one coefficient for each basis function in the smooth.
 </codeblock>
 
-The model coefficients include one coefficient for the intercept as well as one coefficient for each basis function in the smooth.
+
+Multiple Choice: How many coefficients are there for the _basis functions_ that compose the smooth curve in this model?
 
 <choice>
 <opt text="1">

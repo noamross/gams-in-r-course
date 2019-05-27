@@ -141,7 +141,7 @@ s(price)      2.681  3.421  1.678    0.155
 s(comp.ratio) 1.000  1.001 18.923 2.22e-05 ***  <--
 s(width)      1.001  1.001  0.357    0.551      
 ```
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/edf-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/edf-1.png?raw=true)
 
 
 Notes: We can see this by plotting.  Here are partial effect plots for the weight and compression ratio smooths. You can see the weight smooth, with an edf over 6, is complex and wiggly.  But the compression ratio smooth, with an edf of 1, is linear.
@@ -177,7 +177,7 @@ s(price)      2.681  3.421  1.678    0.155      <--
 s(comp.ratio) 1.000  1.001 18.923 2.22e-05 ***
 s(width)      1.001  1.001  0.357    0.551      
 ```
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/signif-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/signif-1.png?raw=true)
 
 Notes: A good way to interpret significance for smooth terms in GAMs is this: a significant smooth term is one where you can not draw a horizontal line through the 95% confidence interval.
 
@@ -197,7 +197,7 @@ s(comp.ratio) 1.000  1.001 18.923 2.22e-05 ***  <--
 s(width)      1.001  1.001  0.357    0.551      <--
 ```
     
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/signif2-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/signif2-1.png?raw=true)
 
 Notes: Note that high EDF doesn't mean significance or vice-versa. A smooth may be linear and significant, non-linear and non-significant, or one of each.  
 

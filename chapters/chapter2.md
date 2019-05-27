@@ -14,16 +14,12 @@ id: 2
 
 </exercise>
 
-<exercise id="2" title="Significance and linearity (I)">
+<exercise id="2" title="Significance and linearity">
 
 It's time for you to summarize a model and interpret the output.
 
-After summarizing the model, you will answer the following question: 
-
-Which smooth term in this model is _significant_ and _linear_?
-
 **Instructions**
-- Summarize the `mod_city4` model.
+- Summarize the `mod_city4` model, then answer the questions.
 
 <codeblock id="02_02">
 
@@ -31,7 +27,7 @@ You can call the `summary()` function on the model object which will provide you
 
 </codeblock>
 
-(hint)You can call the `summary()` function on the model object which will provide you with a table of information on the model smooths.
+Multiple Choice: Which smooth term in this model is _significant_ and _linear_?
 
 <choice>
 <opt text="weight">
@@ -65,11 +61,7 @@ Correct! `price` is significant (p <0.05) and linear (`edf` near 1).
 </opt>
 </choice>
 
-</exercise>
-
-<exercise id="3" title="Significance and linearity (II)">
-
-Looking at the same model (`mod_city4`), which smooth term is _non-significant_ and _non-linear_?
+Multiple Choice: In the same model (`mod_city4`), which smooth term is _non-significant_ and _non-linear_?
 
 <choice>
 <opt text="weight">
@@ -105,14 +97,14 @@ Correct! Now let's move on to interpreting our models visually.
 
 </exercise>
 
-<exercise id="4" title="Visualizing GAMs" type="slides">
+<exercise id="3" title="Visualizing GAMs" type="slides">
 
 <slides source="chapter2_04"> 
 </slides>
 
 </exercise>
 
-<exercise id="5" title="Plotting the motorcycle crash model and data">
+<exercise id="4" title="Plotting the motorcycle crash model and data">
 
 For our first plotting exercise, we'll add _partial residuals_ to the _partial effect plot_ of a GAM so as to compare the model to the data.
 
@@ -128,7 +120,7 @@ For our first plotting exercise, we'll add _partial residuals_ to the _partial e
 
 </exercise>
 
-<exercise id="6" title="Plotting multiple auto performance variables">
+<exercise id="5" title="Plotting multiple auto performance variables">
 
 In plotting GAMs, you sometimes want to look at just parts of a model, or all the terms in model.  Here you'll practice selecting which terms to visualize.
 
@@ -147,7 +139,7 @@ In plotting GAMs, you sometimes want to look at just parts of a model, or all th
 
 </exercise>
 
-<exercise id="7" title="Visualizing auto performance uncertainty">
+<exercise id="6" title="Visualizing auto performance uncertainty">
 
 Confidence intervals are a very important visual indicator of model fit.  Here you'll practice changing the appearance of confidence intervals and transforming the scale of partial effects plots.
 
@@ -165,45 +157,44 @@ Confidence intervals are a very important visual indicator of model fit.  Here y
 
 </exercise>
 
-<exercise id="8" title="Model checking with gam.check()" type="slides">
+<exercise id="7" title="Model checking with gam.check()" type="slides">
 
 <slides source="chapter2_08"> 
 </slides>
 
 </exercise>
 
-<exercise id="9" title="Reading model diagnostics">
+<exercise id="8" title="Reading model diagnostics">
 
 `gam.check()` helps you understand whether you have enough basis functions to model the data.
 
-After running checks on the model, answer the following question: Which smooths do not have sufficient numbers of basis functions?
-
 **Instructions**
--  Print diagnostics on model (`mod`) basis size and plots of model residuals.
+-  Print diagnostics on model (`mod`) basis size and plots of model residuals, than answer the question.
 
 <codeblock id="02_09">
 
-Call `gam.check()` on the model.
+-   Call `gam.check()` on the model.
+-   Smooths that have _significant_ effects in the diagnostic test (`p` < 0.05, with asterisks) generally do not have enough basis functions.  This indicates non-random patterns in residuals.
 
 </codeblock>
 
 
-(hint) Smooths that have _significant_ effects in the diagnostic test (`p` < 0.05, with asterisks) generally do not have enough basis functions.  This indicates non-random patterns in residuals.
+Multiple Choice: Which smooths do not have sufficient numbers of basis functions?
 
 <choice>
-<opt text="`x0`">
+<opt text="x0">
 
 Incorrect. A smooth without enough basis functions would have significant results in `gam.check()`
 
 </opt>
 
-<opt text="`x1`" >
+<opt text="x1" >
 
 Incorrect. A smooth without enough basis functions would have significant results in `gam.check()`
 
 </opt>
 
-<opt text="`x2`" correct="true">
+<opt text="x2" correct="true">
 
 Correct! `x2` does not have enough basis functions because it has a significant result in the diagnostic test.
 
@@ -219,7 +210,7 @@ Incorrect. A smooth without enough basis functions would have significant result
 
 </exercise>
 
-<exercise id="10" title="Fixing problems with model diagnostics">
+<exercise id="9" title="Fixing problems with model diagnostics">
 
 You can use `gam.check()` to improve models by updating them based on its results.
 
@@ -240,52 +231,50 @@ You can use `gam.check()` to improve models by updating them based on its result
 
 </exercise>
 
-<exercise id="11" title="Checking concurvity" type="slides">
+<exercise id="10" title="Checking concurvity" type="slides">
 
 <slides source="chapter2_11"> 
 </slides>
 
 </exercise>
 
-<exercise id="12" title="Examining overall concurvity in auto data">
+<exercise id="11" title="Examining overall concurvity in auto data">
 
 Let's take a look at concurvity in the fuel efficiency model variables.  
 
-After checking the overall concurvity of `mod`, answer the following question: Which smooth is _least_ pre-determined by all the other variables?
-
 **Instructions**
-- Inspect the overall concurvity of `mod`.
+- Inspect the overall concurvity of `mod`, than answer the question.
 
 <codeblock id="02_12">
 
-For overall concurvity, use `full = TRUE` in the `concurvity()` function.
-
-</codeblock>
-
-(hint) 
+- For overall concurvity, use `full = TRUE` in the `concurvity()` function.
 - The _least_ pre-determined variable generally has the _lowest_ concurvity according to all three ways of measuring it.
 - It is sometime helpful to wrap the `concurvity()` results in a `round()` function for easier inspection, like so: `round(concurvity(mod, full = TRUE), 2)`.
 
+</codeblock>
+
+Multiple Choice: Which smooth is _least_ pre-determined by all the other variables?
+
 <choice>
-<opt text="`s(length)`">
+<opt text="s(length)">
 
 Incorrect. `length` has high overall concurvity.
 
 </opt>
 
-<opt text="`s(width)`" >
+<opt text="s(width)" >
 
 Incorrect. `width` has high overall concurvity.
 
 </opt>
 
-<opt text="`s(height)`" correct="true">
+<opt text="s(height)" correct="true">
 
 Correct! `height` has relatively low concurvity.  It isn't too similar to any of the other variables.
 
 </opt>
 
-<opt text="`s(weight)`">
+<opt text="s(weight)">
 
 Incorrect. `weight` has high overall concurvity.
 
@@ -295,23 +284,21 @@ Incorrect. `weight` has high overall concurvity.
 
 </exercise>
 
-<exercise id="13" title="Examining concurvity between auto variables">
+<exercise id="12" title="Examining concurvity between auto variables">
 
 Now, let's look at concurvity _between_ model variables.
 
-After examining the pairwise concurvity between variables in `mod`, answer the following question: Which two variables have the greatest worst-case concurvity?
-
 **Instructions**
-- Inspect the pairwise concurvity for variables in `mod`.
+- Inspect the pairwise concurvity for variables in `mod`, then answer the question.
 
 <codeblock id="02_13">
 
-For pairwise concurvity, use `full = FALSE` in the `concurvity()` function.
+- For pairwise concurvity, use `full = FALSE` in the `concurvity()` function.
+- It is sometimes helpful to round concurvity values for easier inspection, which you can do for each matrix like so `round(concurvity(mod, full = FALSE)$worst, 2)`.
 
 </codeblock>
 
-(hint) 
-It is sometimes helpful to round concurvity values for easier inspection, which you can do for each matrix like so `round(concurvity(mod, full = FALSE)$worst, 2)`.
+Multiple Choice: Which two variables have the greatest worst-case concurvity?
 
 <choice>
 <opt text="`height` and `length`">
@@ -326,13 +313,13 @@ It is sometimes helpful to round concurvity values for easier inspection, which 
 
 </opt>
 
-<opt text="`length` and `width`" correct="true">
+<opt text="`length` and `width`">
 
 Close! `length` and `width` have a high worst-case concurvity: about 0.834  Which pair of variables has even greater concurvity?
 
 </opt>
 
-<opt text="`weight` and `width`">
+<opt text="`weight` and `width`"  correct="true">
 
 Correct! `weight` and `width` have worst-case concurvity of about 0.895.
 

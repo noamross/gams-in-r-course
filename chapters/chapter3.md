@@ -18,8 +18,6 @@ id: 3
 
 Let's take a closer look at the `meuse` data and use it to fit your first 2-D model. 
 
-Unless otherwise mentioned, assume that `mgcv` is loaded in your workspace going forward. 
-
 After reviewing the model you will fit, answer the following question: 
 
 How many basis functions are used in the two-dimensional smooth?
@@ -39,11 +37,9 @@ How many basis functions are used in the two-dimensional smooth?
 
 - The formula syntax for an interaction in a GAM model is `s(x1, x2)`. 
 - Don't forget to use the "REML" method in your GAM.
+- Look at the output of `coef(mod2d)`. How many coefficients are associated with the `s(x, y)` smooth?
 
 </codeblock>
-
-(hint) 
-Look at the output of `coef(mod2d)`. How many coefficients are associated with the `s(x, y)` smooth?It is sometimes helpful to round concurvity values for easier inspection, which you can do for each matrix like so `round(concurvity(mod, full = FALSE)$worst, 2)`.
 
 <choice>
 <opt text="10">
@@ -101,7 +97,7 @@ Fit another model to predict cadmium in the soil, this time including smooths fo
 
 Let's explore the different visualization schemes available in `mgcv`'s `plot()` function.
 
-The model you built in the last exercise (`mod2da`) is available in your workspace.
+We'll use the model you built in the last exercise (`mod2da`).
 
 **Instructions**
 - Plot the interaction terms of `mod2da` as a contour plot.
@@ -132,9 +128,7 @@ To display interaction terms as colored heat maps, use `scheme = 2`.
 
 <exercise id="6" title="Customizing 3D plots">
 
-Uncertainty is easy to see in plots of univariate smooths, but more challenging to represent in 2D relationships.  Here we'll visualize uncertainty in a geospatial interaction. 
-
-The model (`mod2d`) from exercise 2 is available in your workspace.
+Uncertainty is easy to see in plots of univariate smooths, but more challenging to represent in 2D relationships.  Here we'll visualize uncertainty in a geospatial interaction, using the model `mod2d` from exercise 2.
 
 <codeblock id="03_06">
 
@@ -163,7 +157,7 @@ The `theta` parameter rotates the plot.
 
 When making predictions from the models, it is important to understand how far from the range of your data you are extrapolating.  With multivariate smooths, the shape of the areas supported by data may be complex.  Here you'll make plots that compare extrapolations to support in the data.
 
-The model (`mod2d`) from exercise 2 is available in your workspace.
+One again we'll use `mod2d` from exercise 2.
 
 **Instructions**
 Make a contour plot of the model using `vis.gam()`, extrapolating out from the data **5%**.

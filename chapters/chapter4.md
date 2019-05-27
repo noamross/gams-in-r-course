@@ -28,7 +28,9 @@ What does the `log_mod` model estimate the probability of a person making a purc
 
 <codeblock id="04_02">
 
-Use the `family = binomial` argument to fit a logistic model.
+- Use the `family = binomial` argument to fit a logistic model.
+- The first value returned from running `coef()` on the model is the intercept.
+- Use `plogis()` to convert log-odds to probability.
 
 </codeblock>
 
@@ -66,10 +68,6 @@ Incorrect. The probability when all variables are at their mean is determined on
 
 In this exercise, you will fit a logistic GAM that predicts the outcome (`purchase`) in `csale`, using ***all*** other variables as predictors.
 
-After summarizing the model, answer the following question:  
-
-Which term in the model is _significant_ but approximately _linear_?
-
 **Instructions**
 - Fit a logistic GAM on all variables. 
 - Print the summary of the model.
@@ -81,28 +79,28 @@ Which term in the model is _significant_ but approximately _linear_?
 
 </codeblock>
 
-Choice
+Multiple Choice: Which term in the model is _significant_ but approximately _linear_?
 
 <choice>
-<opt text="`s(n_acts)`">
+<opt text="s(n_acts)">
 
 Incorrect. `s(n_acts)` is nonlinear, as it has `edf` much larger than 1.
 
 </opt>
 
-<opt text="`s(avg_prem_balance)`">
+<opt text="s(avg_prem_balance)">
 
 Incorrect. `s(avg_prem_balance)` is nonlinear, as it has `edf` much larger than 1.
 
 </opt>
 
-<opt text="`s(retail_crdt_ratio)`" >
+<opt text="s(retail_crdt_ratio)" >
 
 Incorrect. `s(retail_crdt_ratio)` is nonsignifcant, as it has p > 0.05.
 
 </opt>
 
-<opt text="`s(cred_limit)`" correct="true">
+<opt text="s(cred_limit)" correct="true">
 
 Correct! This term is linear with `edf` near one, and with p < 0.05.  These same terms apply in the case of logistic GAMs.
 
@@ -122,21 +120,6 @@ Correct! This term is linear with `edf` near one, and with p < 0.05.  These same
 <exercise id="5" title="Visualizing influences on purchase probability">
 
 Let's try plotting and interpreting the purchasing behavior model from the last lesson.  You'll step through several iterations of plots of `log_mod2`, moving from raw plots on the fitting scale towards plots on the response scale with more natural interpretations.
-
-The model (`log_mod2`) from the previous exercise is available in your workspace.
-
-```r
-csale <- readRDS(url("https://assets.datacamp.com/production/repositories/1786/datasets/cad8c6b369fb6bfbdbae6b17c01df88e1bd336c4/csale.rds"))
-set.seed(0)
-library(mgcv)
-log_mod2 <- gam(purchase ~ s(n_acts) + s(bal_crdt_ratio) +
-                		   s(avg_prem_balance) + s(retail_crdt_ratio) +
-                           s(avg_fin_balance)  + s(mortgage_age) + s(cred_limit),
-              data = csale,
-              family = binomial,
-              method = "REML")
-```
-
 
 **Instructions**
 
@@ -188,29 +171,28 @@ All else being equal, which of these variables has the largest effect on purchas
 
 #![](https://assets.datacamp.com/production/repositories/1786/datasets/7ae1b168cc3fb462fadc5e554aabc410332d55aa/logmod2plot-1.png)
 
-`@hint`
-Which partial effect spans the largest range on the y-axis?
+_Hint_: Which partial effect spans the largest range on the y-axis?
 
 <choice>
-<opt text="`s(avg_fin_balance)`">
+<opt text="s(avg_fin_balance)">
 
 Incorrect. `avg_fin_balance` does not have the largest effect on purchase probability.
 
 </opt>
 
-<opt text="`s(mortage_age)`">
+<opt text="s(mortage_age)">
 
 Incorrect. `cred_limit` does not have the largest effect on purchase probability.
 
 </opt>
 
-<opt text="`s(cred_limit)`" >
+<opt text="s(cred_limit)" >
 
 Incorrect. `mortgage_age` does not have the largest effect on purchase probability.
 
 </opt>
 
-<opt text="`s(n_acts)`" correct="true">
+<opt text="s(n_acts)" correct="true">
 
 Correct! `n_acts` has the largest effect on purchase probability.
 
@@ -226,8 +208,7 @@ What is the expected purchase probability of a person with 20 accounts (`n_acts 
 
 #![](https://assets.datacamp.com/production/repositories/1786/datasets/7ae1b168cc3fb462fadc5e554aabc410332d55aa/logmod2plot-1.png)
 
-`@hint`
-For the smooth `s(n_acts)`, what is the approximate value on the y-axis where the x axis equals 20?
+_Hint_: For the smooth `s(n_acts)`, what is the approximate value on the y-axis where the x axis equals 20?
 
 <choice>
 <opt text="0.15">
@@ -263,29 +244,28 @@ Which of these predictions has the greatest uncertainty, assuming all other vari
 
 #![](https://assets.datacamp.com/production/repositories/1786/datasets/7ae1b168cc3fb462fadc5e554aabc410332d55aa/logmod2plot-1.png)
 
-`@hint`
-Look at the confidence intervals around the partial effects at each value.
+_Hint_: Look at the confidence intervals around the partial effects at each value.
 
 <choice>
-<opt text="The probability of purchase when `avg_fin_balance` is 2000.">
+<opt text="The probability of purchase when avg_fin_balance is 2000.">
 
 Incorrect. Where along this partial effect are the confidence intervals wider?
 
 </opt>
 
-<opt text="The probability of purchase when `mortgage_age` is 50.">
+<opt text="The probability of purchase when mortgage_age is 50.">
 
 Incorrect. Look at the confidence intervals around other partial effects.
 
 </opt>
 
-<opt text="The probability of purchase when `avg_fin_balance` is 5000." correct="true">
+<opt text="The probability of purchase when avg_fin_balance is 5000." correct="true">
 
 Correct. There are wide confidence intervals around the `avg_fin_balance` smooth at a value at 5000.
 
 </opt>
 
-<opt text="The probability of purchase when `mortgage_age` is 150." >
+<opt text="The probability of purchase when mortgage_age is 150." >
 
 Incorrect. Look at the confidence intervals around other partial effects.
 
@@ -302,23 +282,9 @@ Incorrect. Look at the confidence intervals around other partial effects.
 
 </exercise>
 
-<exercise id="10" title="Predicting purchase behavior and uncertainty(tab)">
+<exercise id="10" title="Predicting purchase behavior and uncertainty">
 
 The `log_mod2` purchase behavior model lets you make predictions off credit data. In this exercise, you'll use a new set of data, `new_credit_data`, and calculate predicted outcomes and confidence bounds. 
-
-The model (`log_mod2`) from the exercise 3 is available in your workspace.
-
-```{r}
-library(mgcv)
-csale <- readRDS(url("https://assets.datacamp.com/production/repositories/1786/datasets/3331154338220d6597187e3c7bc1e5b7ec064858/csale.rds"))
-new_credit_data <- readRDS(url("https://assets.datacamp.com/production/repositories/1786/datasets/c76599b99a7f00c8b7f74ca7765b2186216b0dde/new_credit_data.rds"))
-log_mod2 <- gam(purchase ~ s(n_acts) + s(bal_crdt_ratio) +
-                		   s(avg_prem_balance) + s(retail_crdt_ratio) +
-                           s(avg_fin_balance)  + s(mortgage_age) + s(cred_limit),
-              data = csale,
-              family = binomial,
-              method = "REML")
-```
 
 **Instructions**
 - Use the model `log_mod2` to calculate the predicted purchase log-odds, and standard errors for those predictions, for the observations in `new_credit_data`.
@@ -355,24 +321,7 @@ The `plogis()` function converts values from log-odds to probability.
 
 <exercise id="11" title="Explaining individual behaviors">
 
-In the final exercise of this chapter, you will use the model `log_mod2` to predict the contribution of each term to the prediction of one row in `new_credit_data`.  
-
-After predicting, answer the following question:  
-
-Which term makes the greatest contribution to the prediction of this first data point?
-
-```r
-library(mgcv)
-csale <- readRDS(url("https://assets.datacamp.com/production/repositories/1786/datasets/3331154338220d6597187e3c7bc1e5b7ec064858/csale.rds"))
-new_credit_data <- readRDS(url("https://assets.datacamp.com/production/repositories/1786/datasets/c76599b99a7f00c8b7f74ca7765b2186216b0dde/new_credit_data.rds"))
-log_mod2 <- gam(purchase ~ s(n_acts) + s(bal_crdt_ratio) +
-                		   s(avg_prem_balance) + s(retail_crdt_ratio) +
-                           s(avg_fin_balance)  + s(mortgage_age) + s(cred_limit),
-              data = csale,
-              family = binomial,
-              method = "REML")
-
-```
+In the final exercise of this chapter, you will use the model `log_mod2` to predict the contribution of each term to the prediction of one row in `new_credit_data`, then use this to determine which variable has the greatest influencce on an output.
 
 **Instructions**
 - Predict the effect of each model term on the output _for the first row_ of `new_credit_data`.
@@ -381,31 +330,32 @@ log_mod2 <- gam(purchase ~ s(n_acts) + s(bal_crdt_ratio) +
 
 - Use the `type = "terms"` argument in `predict()` to get the contribution of each term. 
 - Subset the predictions to the first row.
+- Which term has the greatest absolute value?
 
 </codeblock>
 
-hint - Which term has the greatest absolute value?
+Multiple choice: Which term makes the greatest contribution to the prediction of this first data point?
 
 <choice>
-<opt text="`s(n_acts)`">
+<opt text="s(n_acts)">
 
 Incorrect. `s(n_acts)` lower the predicted probability, but another term raises it even more.
 
 </opt>
 
-<opt text="`s(bal_crdt_ratio)`" correct="true">
+<opt text="s(bal_crdt_ratio)" correct="true">
 
 Correct! For this data point, `s(bal_crdt_ratio)` has the greatest contribution to the prediction.  Note this is despite the fact that `s(n_acts)` has a larger _overall_ effect, as we saw in the last section.
 
 </opt>
 
-<opt text="`s(avg_prem_balance)`">
+<opt text="s(avg_prem_balance)">
 
 Incorrect. Another term has more influence on this prediction than `s(avg_premium_balance)`
 
 </opt>
 
-<opt text="`s(retail_crdt_ratio)`" >
+<opt text="s(retail_crdt_ratio)" >
 
 Incorrect. `s(retail_crdt_ratio)` has a very small influence on the predicted outcome.
 

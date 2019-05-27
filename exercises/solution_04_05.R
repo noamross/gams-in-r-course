@@ -1,4 +1,4 @@
-csale <- readRDS(url("https://assets.datacamp.com/production/repositories/1786/datasets/cad8c6b369fb6bfbdbae6b17c01df88e1bd336c4/csale.rds"))
+csale <- readRDS("csale.rds")
 set.seed(0)
 library(mgcv)
 log_mod2 <- gam(purchase ~ s(n_acts) + s(bal_crdt_ratio) +

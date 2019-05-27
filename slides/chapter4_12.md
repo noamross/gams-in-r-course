@@ -112,13 +112,7 @@ Notes: mgcv has tools for variable selection when model building.  You can learn
 
 Notes: Finally, there are other options in mgcv for alternative or more complex model structures, such as mixed effects. The ?gam.models help file has an overview of these topics and will point you to more documentation.  If you are interested in these more complex models, the course on Hierarchical and Mixed Effects Models here on DataCamp may be of interest to you.
 
-# Complex model structures
-
-```r
-?gam.models
-``` 
-
-Notes: Finally, there are other options in mgcv for alternative or more complex model structures, such as mixed effects. The ?gam.models help file has an overview of these topics and will point you to more documentation.  If you are interested in these more complex models, the course on Hierarchical and Mixed Effects Models here on DataCamp may be of interest to you.
+---
 
 # More Resources
 
@@ -131,7 +125,7 @@ Go to <http://bit.ly/gam-resources> for a collection of:
 
 about GAMs!
 
-Note: I've collected some of the my resources for learning about GAMs so you can continue learning. If you want to extend your knowledge, practice more, have a handy reference, or learn about GAMs in a different way, go to <http://bit.ly/gam-resources> links to a variety of GAM-related material by expert statisticians instructors. 
+Notes: I've collected some of the my resources for learning about GAMs so you can continue learning. If you want to extend your knowledge, practice more, have a handy reference, or learn about GAMs in a different way, go to <http://bit.ly/gam-resources> links to a variety of GAM-related material by expert statisticians instructors. 
 
 ---
 

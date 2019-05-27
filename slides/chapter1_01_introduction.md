@@ -13,7 +13,7 @@ Notes: Hi, I'm Noam Ross. I'm a scientist who studies infectious diseases. I use
 
 # Trade-offs in Model Building
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/tradeoff-slider.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/tradeoff-slider.png?raw=true)
 
 
 Notes: Whenever we build statistical models, we face a trade-off between flexibility and interpretability. GAMs offer a middle ground between simple models, such as those we fit with linear regression, and more complex machine learning models like neural networks.
@@ -28,7 +28,7 @@ GAMs offer a middle ground: they can be fit to complex, nonlinear relationships 
 
 # Non-linear Relationships
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/nonlinear-scatter-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/nonlinear-scatter-1.png?raw=true)
 
 Notes: GAMs let us flexibly model non-linear relationships. Here I've made a scatter plot of two variables, X and Y. We can see from the scatterplot that there is clearly some relationship between the variables, but it is not linear.
 
@@ -40,7 +40,7 @@ Notes: GAMs let us flexibly model non-linear relationships. Here I've made a sca
 linear_mod <- lm(y ~ x, data = my_data)
 ```
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/nonlinear-scatter-lm-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/nonlinear-scatter-lm-1.png?raw=true)
 
 Notes: If we fit a linear model to the data using the lm() function and the usual formula syntax, we can see it won't do a very good job. The model doesn't capture key aspects of this relationship.
 
@@ -53,7 +53,7 @@ library(mgcv)
 gam_mod <- gam(y ~ s(x), data = my_data)
 ```
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/nonlinear-scatter-gam-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/nonlinear-scatter-gam-1.png?raw=true)
 
 Notes: With a GAM, however, we can fit data with smooths, or splines, which are functions that can take on a wide variety of shapes. 
 We fit a GAM using the gam() function from the mgcv package. 
@@ -64,7 +64,7 @@ A GAM can capture the nonlinear aspects of not only this relationship, but of ma
 
 # Basis Functions
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/basis-functions-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/basis-functions-1.png?raw=true)
 
 Notes: The flexible smooths in GAMs are actually constructed of many smaller functions. These are called basis functions. Each smooth is the sum of a number of basis functions, and each basis function is multiplied by a coefficient, each of which is a parameter in the model. In the plot here on the left, we show the basis functions of a GAM where all the coefficients are the same. On the right, we show the same basis functions after model-fitting, where each has a coefficient fit to the data. You can see how these basis functions add up to create the overall smooth shape. So a single nonlinear relationship between a dependent and independent variable has several parameters, plus an intercept. This is different, and more complex, than a linear model, where each variable has only a single coefficient or parameter.
 

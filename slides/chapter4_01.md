@@ -32,7 +32,7 @@ However, we often want to model data with binary outcomes, like the presence of 
 
 # Probabilities and Log-Odds: Logistic Function
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/logistic-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/logistic-1.png?raw=true)
 
 Notes: When we model a binary outcome, our prediction is a probability, which must be between zero and one. Since GAMs can have an outcome of any number, we convert the GAM output to a probability using a logistic function. The logistic function is a transformation that converts numbers of any value to probabilities between zero and one.  In this context the numbers that take on any value can be interpreted as log-odds - the log of the ratio of positive outcomes to negative outcomes.
 
@@ -40,7 +40,7 @@ Notes: When we model a binary outcome, our prediction is a probability, which mu
 
 # Probabilities and Log-Odds: Logit Function
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/logit-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/logit-1.png?raw=true)
 
 Notes: The inverse of the logistic function is the logit function, which translates probabilities between zero and one to log-odds which can have any value.
 

@@ -17,7 +17,7 @@ Notes: Simple smooth x,y interactions are not the only kind of complex relations
 model4b <- gam(hw.mpg ~ s(weight, by = fuel) + fuel, data = mpg,
               method = "REML")
 ```
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/categorical-by-intercept-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/categorical-by-intercept-1.png?raw=true)
 
 
 Notes: Back in Chapter 1, we introduced the idea of factor-smooth interactions.  That is, models where we used the "by" argument in a smooth to fit different smooths for each value of a categorical variable.  Here's the fuel economy model we fit, where we used different smooths for the effect of weight on fuel economy depending on the fuel type used by cars.
@@ -75,7 +75,7 @@ Notes: With factor-smooths, we do not get a different term for each level of the
 plot(model4c)
 vis.gam(model4c, theta = 125, plot.type = "persp")
 ```
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/plotvvisgam-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/plotvvisgam-1.png?raw=true)
 
 
 Notes: When you call the plot() function on a GAM with a factor-smooth fit using the bs="fs" argument, it will, by default, make one plot with multiple smooths on it.  

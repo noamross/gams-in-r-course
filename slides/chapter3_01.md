@@ -13,7 +13,7 @@ Notes: Up until now, we have been working with models made up of one or several 
 
 # Interactions
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/formula1-chapter3.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/formula1-chapter3.png?raw=true)
 
 Notes: You may be familiar with the concept of interactions from linear modeling.  Interactions in models represent the fact that outcomes depend on non-independent relationships of multiple variables.  In a linear model, they are generally represented by adding a term multiplying two variables.  This can result in the outcome being higher or lower than what would be predicted by the sum of the two values alone.
 
@@ -21,9 +21,18 @@ Notes: You may be familiar with the concept of interactions from linear modeling
 
 # Interactions in GAMs
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/formula2-chapter3.png?raw=true)
+<div  class='left' style='float:left;width:25%'>
+<p data-markdown>
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/formula2-chapter3.png?raw=true)
+</p>
+</div>
+<div class='right' style='float:right;width:75%'>
+<p data-markdown>
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/interactions-1-1.png?raw=true)
+</p>
+</div>
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/interactions-1-1.png?raw=true)
+
 
 Notes: In a GAM, the relationship between a variable and an outcome changes across the range of the smooth. Similarly, interactions are different across all the values of two or more variables. We represent interactions between variables as a smooth surface, so any combination of variables can take a different value. This is also a natural way to represent spatial data.
 

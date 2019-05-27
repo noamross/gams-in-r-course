@@ -13,7 +13,8 @@ Notes: Now we'll learn about another area that's important to check in GAMs: con
 
 # Collinearity
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/pairs-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/pairs-1.png?raw=true) <!-- .element: style="max-height:525px;" -->
+
 
 Notes: You may recall the concept of collinearity from a linear modeling course.  When two variables or covariates in a model are strongly correlated, it's difficult to fit the model, because the outcome variable could be responding to either one.  We call this phenomenon collinearity, and it can result in poorly fit models with large confidence intervals.  In general, we avoid putting multiple collinear variables into the same model.
 
@@ -23,7 +24,7 @@ Here, we look at correlation between three covariates in our mpg data set: the l
 
 # Concurvity
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/concurv-demo-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/concurv-demo-1.png?raw=true)
 
 Notes: With GAMs, we have an additional potential pitfall. Even if two variables aren't collinear, they may have concurvity, that is, one may be a smooth curve of another.  For instance, on the left, we have two covariates, X1 and X2, that are not linearly related but form a perfect parabola.  If we use both X1 and X2 as predictors in a model, we get smooths with wild confidence intervals, as shown in the middle and right plots.
 
@@ -31,18 +32,25 @@ Notes: With GAMs, we have an additional potential pitfall. Even if two variables
 
 # The `concurvity()` function
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/concurv-demo2-1.png?raw=true)
-
+<div  class='left' style='float:left;width:35%'>
+<p data-markdown>![](https://github.com/noamross/gams-in-r-course/blob/master/images/concurv-demo2-1.png?raw=true)</p>
+</div>
+<div class='right' style='float:right;width:65%'>
+<p data-markdown>
 ```r
 concurvity(m1, full = TRUE)
 ```
-
+</p>
+<p data-markdown>
 ```out
             para s(X1) s(X2)
 worst       0    0.84  0.84
 observed    0    0.22  0.57
 estimate    0    0.28  0.60
 ```
+</p>
+</div>
+
 
 
 Notes: mgcv's concurvity() function measures concurvity in model variables.  Like gam.check(), we run this function on a model object to examine the quality of our model.  

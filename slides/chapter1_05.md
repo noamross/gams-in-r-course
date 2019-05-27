@@ -13,7 +13,7 @@ Notes: Now that you have a sense of how GAMs can fit nonlinear data, let's learn
 
 # Getting the right fit
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/thin-gam-fit-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/thin-gam-fit-1.png?raw=true)
 
 -  Close to the data (avoiding under-fitting)
 -  Not fitting the noise (avoiding over-fitting)
@@ -24,7 +24,7 @@ Notes: In general, we want to balance two things when fitting a nonlinear model.
 
 # Balancing Wiggliness
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/formula1-chapter1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/formula1-chapter1.png?raw=true)
 
 Notes: How well the GAM captures patterns in the data is measured by a term called likelihood.  Its complexity, or how much the curve changes shape, is measured by wiggliness. The key to a good fit is the trade-off between the two. This trade-off is expressed by this simple equation, with a smoothing parameter, or lambda value, controlling the balance. This smoothing parameter is optimized when R fits a GAM to data.
 
@@ -32,7 +32,7 @@ Notes: How well the GAM captures patterns in the data is measured by a term call
 
 # Choosing the Right Smoothing Parameter
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/diffsmooth-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/diffsmooth-1.png?raw=true)
 
 Notes: Here are plots of three GAMs with different smoothing, or lambda values.  As you can see, the one on the left smooths too much, creating a straight line through curved data.  The one in the middle smooths too little, fitting noise rather than the trend.  The one on the right is just right. It's lambda value balances over-and-under-fitting.
 
@@ -60,7 +60,7 @@ Instead if we allow R to do this work for us, the mgcv package offers several di
 
 # Number of basis functions
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/diffbasis-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/diffbasis-1.png?raw=true)
 
 Notes: In addition to the smoothing parameter, the other factor that affects how wiggly a GAM function can be is the number of basis functions that make up a smooth function.  Here I've plotted GAMs with 3, 7, and 12 basis functions all fit to the same data.
 

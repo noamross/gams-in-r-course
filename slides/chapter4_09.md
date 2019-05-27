@@ -90,7 +90,7 @@ Notes: If we set the argument se.fit to TRUE in our call, predict() returns a li
 
 # Standard errors (2)
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/logerrs-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/logerrs-1.png?raw=true)
 
 
 Notes: Standard errors are only approximations when we use the probability scale. This is because errors are non-symmetrical on this scale.  If you use standard errors to construct confidence intervals for your predictions, you should do so on the log-odds scale, and then convert them to probability using the plogis() logistic function.

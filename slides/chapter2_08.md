@@ -17,7 +17,7 @@ Notes: Now that we can fit and plot GAMs, we need some checks to make sure that 
 mod <- gam(y ~ s(x1, k = 4) + s(x2, k = 4),
            data = check_data, method = "REML")
 ```
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/fourbases-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/fourbases-1.png?raw=true)
 
 
 Notes: We've learned that the number of basis functions determines how wiggly a smooth can be.  If there are not enough basis functions, it may not be wiggly enough to capture the relationships in data.  Here is a model where smooths have 4 basis functions.  As we see in this partial effect plot, this is not enough to capture the pattern.
@@ -110,7 +110,7 @@ Neither has significant patterns in their residuals and both have enough basis f
 
 # Diagnostic Plots
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/gamcheck-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/gamcheck-1.png?raw=true)
 
 Notes: gam.check() will also generate four plots. Each of these gives a different way of looking at your model residuals.  These plots show the results from the original, poorly fit model. On the top-left is a Q-Q plot, which compares the model residuals to a normal distribution.  A well-fit model's residuals will be close to a straight line.  On bottom left is a histogram of residuals.  We would expect this to have a symmetrical bell shape.  On top-right is a plot of residual values.  These should be evenly distributed around zero.  Finally, on the bottom-right is plot of response against fitted values.  A perfect model would form a straight line.  We don't expect a perfect model, but we do expect the pattern to cluster around the 1-to-1 line.
 
@@ -118,7 +118,7 @@ Notes: gam.check() will also generate four plots. Each of these gives a differen
 
 # Diagnostic Plots
 
-![](https://github.com/flor14/gams-in-r-course/blob/master/images/gamcheck2-1.png?raw=true)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/gamcheck2-1.png?raw=true)
 
 Notes: Now, here is the output of our final model, with larger k values.  See that the Q-Q plot no longer curves, the histogram is bell shaped, and the comparison of response vs. fitted values clusters around a 1-to-1 line.  These all indicate a much better model fit.
 

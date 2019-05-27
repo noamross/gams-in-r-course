@@ -13,7 +13,7 @@ Notes: We have learned about two kinds of two-way interactions: two-dimensional 
 
 # Interactions with one smoothing parameter
 
-FORMULA
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/formula3-chapter3.png?raw=true)
 
 Notes: Earlier in this chapter, we discussed 2D smooths of the form s(x1, x2).  As with all GAM smooths, this one has a smoothing parameter, or lambda value, that defines wiggliness. There is a single lambda value for the whole 2D smooth.
 
@@ -44,7 +44,7 @@ Notes: However, there are lots of situations where having a single smoothing par
 
 # Tensor Smooths
 
-FORMULAS
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/formula4-chapter3.png?raw=true)
 
 ```r
 gam(y ~ te(x1, x2), data = data, method = "REML")
@@ -63,7 +63,7 @@ Tensor smooths are used similarly to regular smooths, one just uses te() instead
 
 # Example: Fitting with Tensors
 
-![compte-1.png](https://github.com/flor14/gams-in-r-course/blob/master/images/compte-1.png?raw=true)
+![compte-1.png](https://github.com/noamross/gams-in-r-course/blob/master/images/compte-1.png?raw=true)
 
 
 Notes: Here's an example that shows how tensors can be a much better tool in some cases.  On the left we're showing the actual relationship between two variables, x1 and x2, and an outcome.  x1 and x2 are on very different scales - x1 varies on a range of less than 5% of x2.  A model fit using s(), which assumes both variables vary similarly, comes out looking like the plot in the middle.  However, if we use tensor smooths, allowing the variables to have different smoothing parameters, we get the model on the right, a much better fit.
@@ -72,7 +72,7 @@ Notes: Here's an example that shows how tensors can be a much better tool in som
 
 # Tensor interactions
 
-FORMULA
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/formula5-chapter3.png?raw=true)
 
 ```r
 gam(y ~ s(x1) + s(x2) + ti(x1, x2), data = data, method = "REML")
@@ -127,7 +127,7 @@ using tensors allows us to separate their individual effects from their interact
 gam(y ~ s(x1) + s(x2) + ti(x1, x2), data = data, method = "REML")
 ```
 
-![tei-1.png](https://github.com/flor14/gams-in-r-course/blob/master/images/tei-1.png?raw=true)
+![tei-1.png](https://github.com/noamross/gams-in-r-course/blob/master/images/tei-1.png?raw=true)
 
 Notes: Here are plots of this model.  We have univariate smooths for x1 and x2, and a surface representing the interaction.  The univariate smooths are additive, and then the interaction is an addition effect on top of those.  Separating the effects in this way makes complex models more understandable.
 
