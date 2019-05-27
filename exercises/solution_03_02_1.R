@@ -5,5 +5,5 @@ data(meuse, package="sp")
 mod2d <- gam(cadmium ~ s(x, y), data = meuse, method = "REML")
 
 # Inspect the model
-summary(mod2da)
+summary(mod2d)
 coef(mod2)
