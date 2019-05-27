@@ -321,7 +321,7 @@ The `plogis()` function converts values from log-odds to probability.
 
 <exercise id="11" title="Explaining individual behaviors">
 
-In the final exercise of this chapter, you will use the model `log_mod2` to predict the contribution of each term to the prediction of one row in `new_credit_data`, then use this to determine which variable has the greatest influencce on an output.
+In the final exercise of this chapter, you will use the model `log_mod2` to predict the contribution of each term to the prediction of one row in `new_credit_data`, then use this to determine which variable has the greatest influence on an output.
 
 **Instructions**
 - Predict the effect of each model term on the output _for the first row_ of `new_credit_data`.
