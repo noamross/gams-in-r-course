@@ -169,7 +169,7 @@ For the next few questions, you'll inspect the partial effects plots of some of 
 
 All else being equal, which of these variables has the largest effect on purchase probability?
 
-#![](https://assets.datacamp.com/production/repositories/1786/datasets/7ae1b168cc3fb462fadc5e554aabc410332d55aa/logmod2plot-1.png)
+#![](https://raw.githubusercontent.com/noamross/gams-in-r-course/master/images/logmod2plot-1.png)
 
 _Hint_: Which partial effect spans the largest range on the y-axis?
 
@@ -206,7 +206,7 @@ Correct! `n_acts` has the largest effect on purchase probability.
 
 What is the expected purchase probability of a person with 20 accounts (`n_acts = 20`) if all other values are average?
 
-#![](https://assets.datacamp.com/production/repositories/1786/datasets/7ae1b168cc3fb462fadc5e554aabc410332d55aa/logmod2plot-1.png)
+#![](https://raw.githubusercontent.com/noamross/gams-in-r-course/master/images/logmod2plot-1.png)
 
 _Hint_: For the smooth `s(n_acts)`, what is the approximate value on the y-axis where the x axis equals 20?
 
@@ -242,7 +242,7 @@ Correct! When `n_acts` is 20 the predicted probability of purchase is about 0.55
 
 Which of these predictions has the greatest uncertainty, assuming all other variables are at average levels?
 
-#![](https://assets.datacamp.com/production/repositories/1786/datasets/7ae1b168cc3fb462fadc5e554aabc410332d55aa/logmod2plot-1.png)
+#![](https://raw.githubusercontent.com/noamross/gams-in-r-course/master/images/logmod2plot-1.png)
 
 _Hint_: Look at the confidence intervals around the partial effects at each value.
 
