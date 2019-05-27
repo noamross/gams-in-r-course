@@ -216,7 +216,7 @@ The `meuse` data set has a factor variable, `landuse`, which specifies the type 
 
 <codeblock id="03_09_1">
 
-- The formula should look like `y ~ s(continuous_vairable, categorical_variable, bs = "fs")`. 
+- The formula should look like `y ~ s(continuous_variable, categorical_variable, bs = "fs")`. 
 - A separate intercept term in not necessary for models of this form.
 - Don't forget `method = "REML"` in your call to `gam()`.
 
