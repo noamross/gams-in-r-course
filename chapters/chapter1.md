@@ -63,6 +63,7 @@ GAMs are made up of _basis functions_ that together compose the smooth terms in 
 
 - The `coef()` function extracts all the model coefficients, which are coefficients for each basis function that makes up the smooth.
 - The model coefficients include one coefficient for the intercept as well as one coefficient for each basis function in the smooth.
+
 </codeblock>
 
 
