@@ -18,7 +18,7 @@ id: 3
 
 Let's take a closer look at the `meuse` data and use it to fit your first 2-D model. 
 
-
+**Instructions**
 - Inspect the `meuse` data with the `head()` and `str()` functions.
 
 <codeblock id="03_02">
@@ -73,7 +73,7 @@ Incorrect. Remember, the number of basis functions is equal to the number of the
 
 Now let's add additional predictors to the model with spatial interactions.
 
-**Instructions**
+**Instructions** 
 Fit another model to predict cadmium in the soil, this time including smooths for the effect of elevation (`elev`) and distance from the river (`dist`) in addition to an `x`, `y` surface.
 
 <codeblock id="03_03">
@@ -164,7 +164,6 @@ Make a contour plot of the model using `vis.gam()`, extrapolating out from the d
 <codeblock id="03_07">
 
 The `too.far` argument determines how far from actual data to extrapolate as a % of the data range.
-
 
 </codeblock>
 
