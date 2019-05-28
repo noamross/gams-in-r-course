@@ -107,19 +107,3 @@ plot(binom_mod, pages = 1, trans = plogis, shift = coef(binom_mod)[1],
 ![](https://github.com/noamross/gams-in-r-course/blob/master/images/winterceptcol-1.png?raw=true)
 
 Notes: Finally, we can always improve our plot by changing visual options as we did with earlier plots.
-
----
-
-# Let's practice!
-
-Notes: Now let's make some plots of logistic models and interpret what they mean.
-
-
-
-
-
-
-
-
-
-

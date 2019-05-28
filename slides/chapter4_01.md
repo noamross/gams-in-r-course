@@ -134,22 +134,3 @@ head(csale)
 ```
 
 Notes: Before we start exercises, lets get familiar with a new data set. The "csale" data set consists of anonymized information from the insurance industry.  The outcome, "purchase", represents whether customers purchased insurance following a direct mail campaign. The other variables consist of information from credit reports of those customers.  This is a small subset of all the variables and data in this set, which is available in the "Information" package. We'll be using this data to model predictors of purchasing behavior.
-
----
-
-# Let's practice!
-
-Notes: Now let's fit and interpret some GAMs.
-
-
-
-
-
-
-
-
-
-
-
-
-

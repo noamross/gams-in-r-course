@@ -88,11 +88,3 @@ s(x2).6
 ```
 
 Notes: When we fit a GAM with R, we can extract the coefficients just like we can for linear models using the coef() function.  Calling this function on a GAM model object will show the coefficients of each of the basis functions of the model.  You can see that even a simple one-smooth model has many coefficients.
-
----
-
-# Let's practice!
-
-Notes: Now, let's fit our first set of models.
-
-

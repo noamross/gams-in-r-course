@@ -180,31 +180,3 @@ Notes: Here we look at the first row of this output to see the role of each term
 For instance, as we can see for this one data point, the number of accounts has about four times the effect in increasing purchase probability prediction than balance-credit ratio.  Mortgage age and credit limit influence the prediction in the opposite direction, about the same amount as balance-credit ratio.
 
 If we add these terms up, add the intercept, and transform using the plogis() function, we get this data point's predicted purchase probability.
----
-
-# Let's practice!
-
-Notes: Now let's make and interpret some predictions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

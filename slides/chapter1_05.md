@@ -87,22 +87,3 @@ gam(y ~ s(x), data = dat, method = "REML")
 Notes: To set the number of basis functions in a smooth, we use the k argument in the smooth function in a GAM formula.  Setting this value too low will prevent the model from being sufficiently wiggly.  If it's high, though, the automatic smoothing parameter selection will prevent it from being too wiggly. We just don't want to set it very high, which can result in a model with more parameters than data, or one that is slow to fit.
 
 Later, in the model testing portion of the course, we will learn how to test if the number of basis functions are adequate to fit our data.
-
----
-
-# Let's practice!
-
-Notes: Now, let's explore GAMs with different smoothing parameters and different numbers of basis functions.
-
-
-
-
-
-
-
-
-
-
-
-
-
