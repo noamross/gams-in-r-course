@@ -91,7 +91,7 @@ First, there are many additional types of smooths beyond the ones we have used h
 ?family.mgcv
 ```
 
-Notes: If you have taken a course in generalized linear models, you probably know that there are many types of outcomes, such as count data, which they can model. These can be fit with GAMs, as well. mgcv also has an extensive collection of outcome distributions above and beyond those available in most GLM packages. You'll find them described in the ?family.mgcv help file.  If you have not taken it already, you may want to consider DataCamp's Generalized Linear Models course.
+Notes: If you have taken a course in generalized linear models, you probably know that there are many types of outcomes, such as count data, which they can model. These can be fit with GAMs, as well. mgcv also has an extensive collection of outcome distributions above and beyond those available in most GLM packages. You'll find them described in the ?family.mgcv help file.  
 
 ---
 # Variable selection
