@@ -137,18 +137,3 @@ plot(gam_model, seWithMean = TRUE, shift = coef(gam_model)[1])
 ![](https://github.com/noamross/gams-in-r-course/blob/master/images/se-with-mean-2.png?raw=true)
 
 Notes: To make the plots even more interpretable, it's useful to shift the scale so that the intercept is included. Using the shift argument, we can shift the scale by value of the intercept, which is the first coefficient of the model.  Note how the y-axis has changed. Now, the partial effect plot has a more natural interpretation - it shows us the prediction of the output, assuming other variables are at their average value.  For instance, this plot shows that the miles per gallon of a 2000 pound car is about 30, all else being equal.
-
----
-
-# Now lets make some plots!
-
-Notes: Now let's make some plots!
-
-
-
-
-
-
-
-
-

@@ -153,19 +153,3 @@ vis.gam(g, view = c("x1", "x2"), plot.type = "contour", nlevels = 20)
 ![](https://github.com/noamross/gams-in-r-course/blob/master/images/contouropts-1.png?raw=true)
 
 Notes: When making contour plots, color and contrast are important for clarity.  Three important additional options for contours shown here are the color parameter, which selects the background color palette, the contour.col parameter, which selects the color of lines, and the nlevels option, which lets you control the number of contour lines - important for showing details and subtleties of interactions.
-
----
-
-# Now let's make some plots!
-
-Notes: Now let's make some plots!
-
-
-
-
-
-
-
-
-
-
