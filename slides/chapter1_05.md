@@ -7,7 +7,7 @@ type: slides
 Noam Ross
 Senior Research Scientist, EcoHealth Alliance
 
-Notes: Now that you have a sense of how GAMs can fit nonlinear data, let's learn a bit more about how they work. GAMs are powerful because of their ability to take on many shapes, but this is also what makes them challenging. Their flexibility makes it easy to over-fit your da
+Notes: Now that you have a sense of how GAMs can fit nonlinear data, let's learn a bit more about how they work. GAMs are powerful because of their ability to take on many shapes, but this is also what makes them challenging. Their flexibility makes it easy to over-fit your data. Here we'll learn how smoothing helps us deal with this issue.
 
 ---
 
