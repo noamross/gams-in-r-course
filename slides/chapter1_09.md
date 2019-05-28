@@ -42,7 +42,7 @@ Notes: We'll now work with the mpg data set.  This is a data set of 205 models o
 model <- gam(hw.mpg ~ s(weight), data = mpg,
              method = "REML")
 ```
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_6790/datasets/onevar-1.png)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/onevar-1.png?raw=true)
 
 
 Notes: Let's start with a very simple one variable model.  Here is the code for a model that predicts highway fuel efficiency as a smooth function of automobile weight. The resulting model captures the nonlinear decreasing relationship between these two variables.
@@ -74,7 +74,7 @@ model2 <- gam(hw.mpg ~ s(weight) + s(length), data = mpg,
               method = "REML")
 ```
 
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_6790/datasets/twovars-1.png)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/twovars-1.png?raw=true)
 
 
 Notes: 
@@ -90,7 +90,7 @@ Note that, in this model, both the effect of weight and price are non-linear ter
 model2 <- gam(hw.mpg ~ s(weight) + length, data = mpg,
               method = "REML")
 ```
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_6790/datasets/mixed-linear-1.png)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/mixed-linear-1.png?raw=true)
 
 
 Notes: Not every term in a GAM has to be nonlinear.  You can combine linear and nonlinear terms.  To add a linear term, don't wrap the predictor in the s() function.  Here I've made the length term from the previous model linear. 
@@ -106,7 +106,7 @@ model2b <- gam(hw.mpg ~ s(weight) + s(length, sp = 1000), data = mpg,
               method = "REML")
 ```
 
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_6790/datasets/mixed-linear-1.png)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/mixed-linear-1.png?raw=true)
 
 Notes: We can produce the same model if we set the smoothing parameter of the length term very high. Strong smoothing results in a linear model.
 
@@ -119,7 +119,7 @@ model3 <- gam(hw.mpg ~ s(weight) + fuel, data = mpg,
               method = "REML")
 ```
 
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_6790/datasets/categorical-1.png)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/categorical-1.png?raw=true)
 
 Notes: However, linear terms are very useful when we have categorical variables as predictors.  For instance, in our mpg data set, the fuel variable has two categories: diesel and gas. When we include a linear term with this categorical variable, the gam() function fits a model with a fixed effect for each level of the category. Here, you can see that having gasoline has a negative effect; diesel vehicles are more fuel efficient. 
 
@@ -135,7 +135,7 @@ Note that, when you use categorical variables this way, it's important that the 
 model4 <- gam(hw.mpg ~ s(weight, by = fuel), data = mpg,
               method = "REML")
 ```
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_6790/datasets/categorical-by-1.png)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/categorical-by-1.png?raw=true)
 
 
 Notes: We can also specify a GAM formula that will fit different smooths for different categorical variables.  We call this a factor-smooth interaction.  By specifying the "by" argument to the s() function, we can tell R to calculate a different smooth for each unique category.
@@ -151,7 +151,7 @@ model4b <- gam(hw.mpg ~ s(weight, by = fuel) + fuel, data = mpg,
               method = "REML")
 ```
 
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_6790/datasets/categorical-by-intercept-1.png)
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/categorical-by-intercept-1.png?raw=true)
 
 
 Notes: Usually, when we have smooth-factor interactions, we want to also include a varying intercept, in case the different categories are different in overall means in addition to shape of their smooths.  Here, you see adding this varying intercept improves the estimate of the smooth for diesel cars.
