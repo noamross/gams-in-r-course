@@ -89,11 +89,3 @@ s(X2)    0  0.22  1.00   |  s(X2)    0  0.28   1.0
 
 Notes: If any of these values from the full = TRUE mode is high, we will want to also use the second mode, setting full = FALSE.  With full = FALSE, the function returns matrices of
 pairwise concurvities.  These show the degree to which each variable is predetermined by each other variable, rather than all the other variables.  This can be used to pinpoint which variables have a close relationship.  Once again, the function returns three measures, this time as three matrices.  Look for the worst-case scenario and see if variables with high values have problematic shapes or confidence intervals.
-
----
-
-# Let's practice!
-
-Notes: Now let's try some examples.
-
-

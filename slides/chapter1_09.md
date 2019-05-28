@@ -155,14 +155,3 @@ model4b <- gam(hw.mpg ~ s(weight, by = fuel) + fuel, data = mpg,
 
 
 Notes: Usually, when we have smooth-factor interactions, we want to also include a varying intercept, in case the different categories are different in overall means in addition to shape of their smooths.  Here, you see adding this varying intercept improves the estimate of the smooth for diesel cars.
-
----
-
-# Let's practice!
-
-Notes: Now, let's practice fitting these different combinations of models.
-
-
-
-
-

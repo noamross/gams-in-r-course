@@ -81,11 +81,3 @@ vis.gam(model4c, theta = 125, plot.type = "persp")
 Notes: When you call the plot() function on a GAM with a factor-smooth fit using the bs="fs" argument, it will, by default, make one plot with multiple smooths on it.  
 
 However, you can also use the vis.gam() function to visualize factor-smooths.  These staircase-like perspective plots are often helpful for comparing the shapes of different smooths.
-
----
-
-#  Let's practice!
-
-Notes: Now lets explore different categorical-continuous interactions with the meuse data set.
-
-

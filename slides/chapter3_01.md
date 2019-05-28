@@ -125,22 +125,3 @@ meuse
 ```
 
 Notes: For exercises involving interactions in GAMs, we will use a new data set called "meuse".  This is geospatial data of heavy metal soil pollution along the Meuse river in the Netherlands. It consists of a data frame with x and y coordinates, measures of heavy metals in the soil, and other spatial covariates such as elevation, distance from the river, and the land-use type occurring in that location. For more information on the source and variables of these data, you can look at the help file for this data set in the sp package.
----
-
-# Let's practice!
-
-Notes: Now let's try some examples of two-dimensional modeling with GAMs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-

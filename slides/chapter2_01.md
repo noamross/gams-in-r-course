@@ -202,31 +202,3 @@ s(width)      1.001  1.001  0.357    0.551      <--
 Notes: Note that high EDF doesn't mean significance or vice-versa. A smooth may be linear and significant, non-linear and non-significant, or one of each.  
 
 In this model, the price term is non-linear but non-significant, meaning it has some complexity but there isn't certainty as to the shape or direction of its effect.  Compression ratio is linear but significant.  Width is neither.
-
----
-
-# Let's practice!
-
-Notes: Now, let's take a close look at some of your models.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
