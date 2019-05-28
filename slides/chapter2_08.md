@@ -121,10 +121,3 @@ Notes: gam.check() will also generate four plots. Each of these gives a differen
 ![](https://github.com/noamross/gams-in-r-course/blob/master/images/gamcheck2-1.png?raw=true)
 
 Notes: Now, here is the output of our final model, with larger k values.  See that the Q-Q plot no longer curves, the histogram is bell shaped, and the comparison of response vs. fitted values clusters around a 1-to-1 line.  These all indicate a much better model fit.
-
----
-
-# Let's check some models
-
-Notes: Now let's see how well some of the other models fit.
-
