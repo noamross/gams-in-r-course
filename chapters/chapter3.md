@@ -131,6 +131,9 @@ Uncertainty is easy to see in plots of univariate smooths, but more challenging 
 
 <codeblock id="03_06">
 
+- Use the parameter `plot.type = "persp"` to generate a 3D perspective plot. 
+- The `se` parameter determines the distance of standard errors.
+
 </codeblock>
 
 Use `vis.gam()` to make a 3D perspective plot of the x, y relationship in the model, using the `se` argument to make confidence interval surfaces at +/- 2 standard errors.
