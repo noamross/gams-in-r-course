@@ -29,7 +29,7 @@ You can call the `summary()` function on the model object which will provide you
 
 Multiple Choice: Which smooth term in this model is _significant_ and _linear_?
 
-<choice>
+<choice id="1">
 <opt text="weight">
 
 `s(weight)` has `edf` over five, indicating it is nonlinear."
@@ -63,7 +63,7 @@ Correct! `price` is significant (p <0.05) and linear (`edf` near 1).
 
 Multiple Choice: In the same model (`mod_city4`), which smooth term is _non-significant_ and _non-linear_?
 
-<choice>
+<choice id="2">
 <opt text="weight">
 
 `s(weight)` has a p-value below 0.05, indicating that it is significant.
