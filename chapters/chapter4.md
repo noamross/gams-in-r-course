@@ -3,7 +3,7 @@ title: '4 - Logistic GAMs for Classification'
 description:
   'In the first three chapters, you used GAMs for regression of continuous outcomes.  In this chapter, you will use GAMs for classification. You will build logistic GAMs to predict binary outcomes like customer purchasing behavior, learn to visualize this new type of model, make predictions, and learn how to explain the variables that influence each prediction.'
 prev: /chapter3
-next: /chapter5
+next: /reference-and-resources
 type: chapter
 id: 4
 ---
