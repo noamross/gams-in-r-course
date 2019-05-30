@@ -53,10 +53,10 @@ const Exercise = ({ id, title, type, children }) => {
                 <div>
                     {children}
                     <footer className={classes.footer}>
-                        <CompleteButton
+                        {type !== 'reference' && <CompleteButton
                             completed={isCompleted}
                             toggleComplete={handleSetCompleted}
-                        />
+                        />}
                         <Button onClick={handleNext} variant="secondary" small>
                             Next
                         </Button>
