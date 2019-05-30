@@ -79,6 +79,8 @@ Similarly, if you use the caret package for predictive modeling, you can pass "g
 ?smooth.terms
 ```
 
+> ![](https://github.com/noamross/gams-in-r-course/blob/master/images/help-smooth-terms.png?raw=true)
+
 Notes: As you continue to use GAMs, you'll discover mgcv has many additional capabilities.  The package also has many extended help files on specific topics that will be useful to explore.
 
 First, there are many additional types of smooths beyond the ones we have used here.  These can be useful in specific situations, such as geospatial modeling or for seasonal time series.  You'll find these described in the ?smooth.terms help file.
@@ -91,6 +93,8 @@ First, there are many additional types of smooths beyond the ones we have used h
 ?family.mgcv
 ```
 
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/help-family-mgcv.png?raw=true)
+
 Notes: If you have taken a course in generalized linear models, you probably know that there are many types of outcomes, such as count data, which they can model. These can be fit with GAMs, as well. mgcv also has an extensive collection of outcome distributions above and beyond those available in most GLM packages. You'll find them described in the ?family.mgcv help file.  
 
 ---
@@ -99,6 +103,8 @@ Notes: If you have taken a course in generalized linear models, you probably kno
 ```r
 ?gam.selection
 ```
+
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/help-gam-selection.png?raw=true)
 
 Notes: mgcv has tools for variable selection when model building.  You can learn about these in the ?gam.selection help file.
 
@@ -110,26 +116,15 @@ Notes: mgcv has tools for variable selection when model building.  You can learn
 ?gam.models
 ``` 
 
-Notes: Finally, there are other options in mgcv for alternative or more complex model structures, such as mixed effects. The ?gam.models help file has an overview of these topics and will point you to more documentation.  If you are interested in these more complex models, the course on Hierarchical and Mixed Effects Models here on DataCamp may be of interest to you.
+![](https://github.com/noamross/gams-in-r-course/blob/master/images/help-gam-models.png?raw=true)
+
+Notes: Finally, there are other options in mgcv for alternative or more complex model structures, such as mixed effects. The ?gam.models help file has an overview of these topics and will point you to more documentation.  There are also a number of links to resources on this topic in the Reference section of this course
 
 ---
 
-# More Resources
+#  Thank You and Keep Learning!
 
-Go to <http://bit.ly/gam-resources> for a collection of:
+Notes: Thanks for taking this course on nonlinear modeling in R with GAMs. I hope you find these flexible and powerful tools useful in your work.  
 
-- Videos
-- Books
-- Papers
-- Other courses
-
-about GAMs!
-
-Notes: I've collected some of the my resources for learning about GAMs so you can continue learning. If you want to extend your knowledge, practice more, have a handy reference, or learn about GAMs in a different way, go to <http://bit.ly/gam-resources> links to a variety of GAM-related material by expert statisticians instructors. 
-
----
-
-#  Thank You!
-
-Notes: Thanks for taking this course on nonlinear modeling in R with GAMs. I hope you find these flexible and powerful tools useful in your work.
+In the final section of this course you will find reference code for re-use and links to more resources.
 
