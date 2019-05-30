@@ -129,7 +129,7 @@ in the model formula, e.g., `y ~ s(x, k = 5)`.
 The smoothing parameter balances between likelihood and wiggliness to optimize model fit. Here, you'll examine smoothing parameters and will fit models with different fixed smoothing parameters.
 
 **Instructions**
-- View the value of the smoothing parameter (λ) of the provided `gam_mod` model by extracting the `sp` value from the model.
+- View the value of the smoothing parameter (\\(\lambda\\)) of the provided `gam_mod` model by extracting the `sp` value from the model.
 - Fit two models to the `mcycle` data with `accel` as a smooth function of `times` and a smoothing parameter of: 
     - 0.1
     - 0.0001
