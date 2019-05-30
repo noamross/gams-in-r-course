@@ -1,8 +1,5 @@
 library(mgcv)
 csale <- readRDS("csale.rds")
-log_mod <- gam(purchase ~ s(mortgage_age), data = csale,
-               family = binomial,
-               method = "REML")
 
 # Examine the csale data frame
 head(csale)

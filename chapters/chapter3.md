@@ -129,6 +129,9 @@ To display interaction terms as colored heat maps, use `scheme = 2`.
 
 Uncertainty is easy to see in plots of univariate smooths, but more challenging to represent in 2D relationships.  Here we'll visualize uncertainty in a geospatial interaction, using the model `mod2d` from exercise 2.
 
+**Instructions**
+-  Use `vis.gam()` to make a 3D perspective plot of the x, y relationship in the model, using the `se` argument to make confidence interval surfaces at +/- 2 standard errors.
+
 <codeblock id="03_06">
 
 - Use the parameter `plot.type = "persp"` to generate a 3D perspective plot. 
@@ -136,18 +139,10 @@ Uncertainty is easy to see in plots of univariate smooths, but more challenging 
 
 </codeblock>
 
-Use `vis.gam()` to make a 3D perspective plot of the x, y relationship in the model, using the `se` argument to make confidence interval surfaces at +/- 2 standard errors.
+
+- Now make another version of the same plot, rotated 135 degrees to view it from another angle.
 
 <codeblock id="03_06_1">
-
-- Use the parameter `plot.type = "persp"` to generate a 3D perspective plot. 
-- The `se` parameter determines the distance of standard errors.
-
-</codeblock>
-
-Make another version of the same plot, rotated 135 degrees to view it from another angle.
-
-<codeblock id="03_06_2">
 
 The `theta` parameter rotates the plot.
 
