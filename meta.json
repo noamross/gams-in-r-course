@@ -18,7 +18,7 @@
     "showProfileImage": true,
     "footerLinks": [
         { "text": "Follow Me on Twitter", "url": "https://twitter.com/noamross" },
-        { "text": "Soure Code on GitHub", "url": "https://github.com/noamross/gams-in-r-course" },
+        { "text": "Source Code on GitHub", "url": "https://github.com/noamross/gams-in-r-course" },
         { "text": "Built with ♥ and Open Source", "url": "https://github.com/ines/course-starter-r" }
     ],
     "theme": "#ec625D"
