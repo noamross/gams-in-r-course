@@ -80,7 +80,7 @@ model2 <- gam(hw.mpg ~ s(weight) + s(length), data = mpg,
 Notes: 
 We see from these plots that length has increasing nonlinear effect on fuel economy, and this effect is weaker than the weight effect. 
 
-Note that, in this model, both the effect of weight and price are non-linear terms, but the two are simply added together to get a final prediction.  That addition is where the additive in generalized additive models comes from.
+Note that, in this model, both the effect of weight and length are non-linear terms, but the two are simply added together to get a final prediction.  That addition is where the additive in generalized additive models comes from.
 
 ---
 
@@ -123,7 +123,7 @@ model3 <- gam(hw.mpg ~ s(weight) + fuel, data = mpg,
 
 Notes: However, linear terms are very useful when we have categorical variables as predictors.  For instance, in our mpg data set, the fuel variable has two categories: diesel and gas. When we include a linear term with this categorical variable, the gam() function fits a model with a fixed effect for each level of the category. Here, you can see that having gasoline has a negative effect; diesel vehicles are more fuel efficient. 
 
-In this model the nonlinear effect of weight applies to vehicles of both gas types. This is nonlinear equivalent to the fixed slope, varying intercept models you may recall from a linear regression course.
+In this model the nonlinear effect of weight applies to vehicles of both gas types. This is the nonlinear equivalent to the fixed slope, varying intercept models you may recall from a linear regression course.
 
 Note that, when you use categorical variables this way, it's important that the variables are stored as factors. The mgcv package does not use character variables.
 
