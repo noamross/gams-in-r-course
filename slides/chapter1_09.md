@@ -14,6 +14,7 @@ Notes: So far, all the GAMs we have seen have been univariate; they have a singl
 # Working Dataset: mpg
 
 ```r
+data("mpg", package="gamair")
 mpg
 ```
 
